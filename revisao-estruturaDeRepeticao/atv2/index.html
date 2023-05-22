@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <div class="content">
+        <img src="../img/Captura de tela 2023-05-22 133028.png" alt="">
+        <div class="box">
+            <h1>Programa número decresente</h1>
+            <div class="campo">
+                <p>Numero:</p>
+                <input type="number" id="campo">
+            </div>
+            <button id="btn">Descer até 1</button>
+            <aside class="underline"></aside>
+            <h2 id="output"></h2>
+        </div>
+    </div>
+    <script>
+        const btn = document.getElementById('btn');
+        const output = document.getElementById('output');
+        const campo = document.getElementById('campo');
+
+        btn.addEventListener('click', ()=>{
+            let valor = Number(campo.value);
+            if( valor === 0 || isNaN(valor)){
+                alert('Digite um número válido')
+                return
+            }
+
+            let resposta = valor
+            
+            for( i = 1; i <= valor; i --){
+                
+                console.log(resposta);
+            }
+        });
+    </script>
+</body>
+</html>
